@@ -1,0 +1,17 @@
+{
+  "name": "MMM-ToDo",
+  "version": "0.0.1",
+  "description": "Fetch TODOs from ics file/url",
+  "author": "Pelaxa",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/pelaxa/MMM-ToDo"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "node-ical": "^0.10.0"
+  },
+  "development": {
+    "moment": "^2.24.0"
+  }
+}
