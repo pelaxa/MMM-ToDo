@@ -1,4 +1,4 @@
-# Module: Calendar
+# Module: MMM-ToDo
 The `MMM-ToDo` module is a clone of the default [calendar module](https://github.com/MichMich/MagicMirror/tree/master/modules/default/calendar), and modified to fetch VTODO
 items from ics/ical URL. It can combine multiple calendars.
 
@@ -45,7 +45,7 @@ The following properties can be configured:
 | `hideCompleted`              | Hides completed events. <br><br> **Possible values:** `true` or `false` <br> **Default value:** `true`
 | `excludedEvents`             | An array of words / phrases from event titles that will be excluded from being shown. <br><br>Additionally advanced filter objects can be passed in. Below is the configuration for the advance filtering object.<br>**Required**<br>`filterBy` - string used to determine if filter is applied.<br>**Optional**<br>`until` - Time before an event to display it  Ex: [`'3 days'`, `'2 months'`, `'1 week'`]<br>`caseSensitive` - By default, excludedEvents are case insensitive, set this to true to enforce case sensitivity<br>`regex` - set to `true` if filterBy is a regex. For those not familiar with regex it is used for pattern matching, please see [here](https://regexr.com/) for more info.<br><br> **Example:** `['Birthday', 'Hide This Event', {filterBy: 'Payment', until: '6 days', caseSensitive: true}, {filterBy: '^[0-9]{1,}.*', regex: true}]` <br> **Default value:** `[]`
 
-### Calendar configuration
+### MMM-ToDo configuration
 
 The `calendars` property contains an array of the configured calendars.
 The `colored` property gives the option for an individual color for each calendar.
@@ -70,7 +70,7 @@ config: {
 }
 ````
 
-#### Calendar configuration options:
+#### MMM-ToDo configuration options:
 | Option                | Description
 | --------------------- | -----------
 | `url`	                | The url of the calendar .ical. This property is required. <br><br> **Possible values:** Any public accessble .ical calendar.
@@ -83,7 +83,7 @@ config: {
 | `titleClass`          | Add a class to the title's cell.
 
 
-#### Calendar authentication options:
+#### MMM-ToDo authentication options:
 | Option                | Description
 | --------------------- | -----------
 | `user`                | The username for HTTP authentication.
