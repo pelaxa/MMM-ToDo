@@ -6,7 +6,6 @@
  */
 
 var NodeHelper = require("node_helper");
-var validUrl = require("valid-url");
 var CalendarFetcher = require("./calendarfetcher.js");
 
 module.exports = NodeHelper.create({
@@ -39,10 +38,13 @@ module.exports = NodeHelper.create({
 	createFetcher: function(url, fetchInterval, excludedEvents, maximumEntries, maximumNumberOfDays, auth, hideCompleted) {
 		var self = this;
 
-		if (!validUrl.isUri(url)) {
-			self.sendSocketNotification("TODO_INCORRECT_URL", {url: url});
+                try {
+			new URL(url);
+		} catch (error) {
+			Log.error("ToDo Error. Malformed url: ", url, error);
+			this.sendSocketNotification("TODO_INCORRECT_URL", {url: url});
 			return;
-		}
+		}		
 
 		var fetcher;
 		if (typeof self.fetchers[url] === "undefined") {
