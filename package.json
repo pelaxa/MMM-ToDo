@@ -9,7 +9,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "node-ical": "^0.20.1",
+    "node-ical": "^0.26.1",
     "moment": "^2.30.1"
   }
 }
